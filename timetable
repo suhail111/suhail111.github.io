@@ -7,7 +7,7 @@
 		<nav>
     		<ul>
         		<li><a href="#">Home</a></li>
-	        	<li><a href="#">Timetable</a></li>
+	        	<li><a href="/timetable">Timetable</a></li>
         		<li><a href="#">Contact</a></li>
         		
     		</ul>
