@@ -1457,7 +1457,7 @@ p.anyone{
 }
 @media (max-width:1366px){
 	.banner1, .banner2, .banner3 {
-		min-height: 450px;
+		min-height: 450px !important;
 		padding: 30em 0 0;
 	}
 	.about-grid:nth-child(2) {
