@@ -203,7 +203,7 @@ body a:hover{
     -ms-background-size: cover;
 }
 .banner1,.banner2,.banner3{
-    min-height: 400px;
+    min-height: 400px !important;
    
 }
 .banner-info{
