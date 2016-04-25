@@ -619,9 +619,10 @@ h3.title:after{
   transition-delay: 0.2s; }
 /*-- //about-bottom --*/
 /*-- footer --*/
-.footer{
-	padding:4em 0 2em;
-	background:#272727;
+.footer {
+  background: #272727 none repeat scroll 0 0;
+  margin-top: 20px;
+  padding: 4em 0 2em;
 }
 .footer-grid-left h3{
 	text-transform: capitalize;
