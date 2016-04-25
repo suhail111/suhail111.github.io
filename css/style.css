@@ -2158,7 +2158,7 @@ p.anyone{
 		padding: 0.5em 0.5em;
 	}
 	.banner1 {
-		background: url(../images/3.jpg) no-repeat -110px 0px;
+		background: url(../images/mscslider3.fw_.png) no-repeat -110px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2168,7 +2168,7 @@ p.anyone{
 }
 @media (max-width:375px){
 	.banner3 {
-		background: url(../images/2.jpg) no-repeat -120px 0px;
+		background: url(../images/mscslider2.fw_.png) no-repeat -120px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -2176,7 +2176,7 @@ p.anyone{
 		-ms-background-size: cover;
 	}
 	.banner2 {
-		background: url(../images/1.jpg) no-repeat -55px 0px;
+		background: url(../images/mscslider1.fw_.png) no-repeat -55px 0px;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
