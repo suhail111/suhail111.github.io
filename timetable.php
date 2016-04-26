@@ -1,34 +1,3 @@
-<?php
-
-if (empty($_POST) === false) {
-  $errors = array();
-
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $comment = $_POST['comment'];
-
-  if(empty($name) === true || empty($email) === true || empty($comment) === true) {
-    $errors[] = "Name, email and message are required!";
-  } else {
-    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-      $errors[] = "It's not a valid email address.";
-    }
-    if (ctype_alpha($name) === false) {
-      $errors[] = "Name must only contains letters!";
-    }
-    if (empty($errors) === true) {
-      mail('taifur@gmail.com', 'Contact Form', $comment, 'From ' . $email);
-      header('Location: contact.php?sent');
-      exit();
-    }
-
-  }
-}
-
-?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,8 +43,8 @@ if (empty($_POST) === false) {
 					<span class="icon-bar"></span>
 				  </button>
 					<div class="logo">
-						<a class="navbar-brand" href="index.php">Sigma </a>
-				    </div>
+						<a class="navbar-brand" href="index.html">Sigma</a>
+					</div>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,8 +52,8 @@ if (empty($_POST) === false) {
 					<nav class="link-effect-12" id="link-effect-12">
 						<ul class="nav navbar-nav">
 							<li><a href="index.php"><span>Home</span></a></li>
-							<li><a href="timetable.php"><span>Timetable</span></a></li>
-							<li class="active"><a href="contact.php"><span>Contact</span></a></li>
+							<li class="active"><a href="timetable.php"><span>Timetable</span></a></li>
+							<li ><a href="contact.php"><span>Contact</span></a></li>
 						</ul>
 					</nav>
 				</div>
@@ -97,34 +66,100 @@ if (empty($_POST) === false) {
 	<div class="mail">
 		<div class="container">
 			<h3><span>Get in touch</span> with Us</h3>
-			<p class="ever"><i>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it</i></p>
+			<p class="ever"><i>Mathematics Support Center Timetable-Spring Semester 2016</i></p>
 			<div class="mail-grids">
-				<div class="col-md-6 mail-grid-left">
-					<div class="mail-grid-left1">
-						<form>
-							<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-							<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-							<input type="submit" value="Submit Now" >
-						</form>
-					</div>
-				</div>
-				<div class="col-md-6 mail-grid-right">
-					<div class="mail-grid-right1">
-						<ul>
-							<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></li>
-							<li>26478 Taj Avenue<span>Newyork City XS 234 32.</span></li>
-						</ul>
-						<ul>
-							<li><i class="glyphicon glyphicon-send" aria-hidden="true"></i></li>
-							<li><a href="mailto:info@examle.com">info@examle.com</a></li>
-						</ul>
-						<ul>
-							<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></li>
-							<li>+1234 574 436<span>+0829 738 920</span></li>
-						</ul>
-					</div>
-				</div>
+				
+			<table class="table table-bordered">
+				  <thead>
+					<tr>
+					  <th>#</th>
+					  <th>Monday</th>
+					  <th>Tuesday</th>
+					  <th>Wednesday</th>
+					  <th>Thursday</th>
+					  <th>Friday</th>
+					  <th>Saturday</th>
+					  <th>Sunday</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <th scope="row">11:00-12:00</th>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					</tr>
+					<tr>
+					  <th scope="row">12:00-13:00</th>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td>Nicola Reeve</td>
+					  <td></td>
+					  <td></td>
+					  <td></td>
+					</tr>
+					<tr>
+					  <th scope="row">13:00-14:00</th>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					</tr>
+					<tr>
+					  <th scope="row">14:00-15:00</th>
+					  <td>Larry the Bird</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					</tr>
+					<tr>
+					  <th scope="row">15:00-16:00</th>
+					  <td>Larry the Bird</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td>Mark Cummings</td>
+					  <td></td>
+					  <td></td>
+					  <td></td>
+					</tr>
+					<tr>
+					  <th scope="row">16:00-17:00</th>
+					  <td>Larry the Bird</td>
+					  <td>Mark Cummings</td>
+					  <td></td>
+					  <td></td>
+					  <td>Mark Cummings</td>
+					  <td></td>
+					  <td></td>
+					</tr>
+					<tr>
+					  <th scope="row">17:00-18:00</th>
+					  <td>Larry the Bird</td>
+					  <td></td>
+					  <td>Mark Cummings</td>
+					  <td></td>
+					  <td></td>
+					  <td></td>
+					  <td>Mark Cummings</td>
+					</tr>
+				  </tbody>
+			</table>
+				
+				
+				
+				
+			</div>
 				<div class="clearfix"> </div>
 			</div>
 			
