@@ -466,9 +466,10 @@ h3.title:after{
     left: 8%;
     width: 25%;
 }
-.mail h3:after{
-    left: 28%;
-    width: 25%;
+.mail h3::after {
+  display: none;
+  left: 28%;
+  width: 25%;
 }
 .about-grid h3 span,.about-bottom-right h3 span,.mail h3 span,h3.title span,.services-grid-left h3 span{
 	color:#4B8F56; 
