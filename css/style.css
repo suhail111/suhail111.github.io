@@ -19,6 +19,9 @@ body a:hover{
 	text-decoration:none;
 }
 /*-- header --*/
+.about-grids {
+  margin-top: 20px;
+}
 .banner-bottom,.typo,.mail,.services {
     background: #FAFAFA;
 }
