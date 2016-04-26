@@ -1,3 +1,34 @@
+<?php
+
+if (empty($_POST) === false) {
+  $errors = array();
+
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $comment = $_POST['comment'];
+
+  if(empty($name) === true || empty($email) === true || empty($comment) === true) {
+    $errors[] = "Name, email and message are required!";
+  } else {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+      $errors[] = "It's not a valid email address.";
+    }
+    if (ctype_alpha($name) === false) {
+      $errors[] = "Name must only contains letters!";
+    }
+    if (empty($errors) === true) {
+      mail('taifur@gmail.com', 'Contact Form', $comment, 'From ' . $email);
+      header('Location: contact.php?sent');
+      exit();
+    }
+
+  }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,7 +104,6 @@
 						<form>
 							<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 							<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-							<input type="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
 							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
 							<input type="submit" value="Submit Now" >
 						</form>
